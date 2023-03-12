@@ -1,0 +1,129 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Project001.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">  
+    <title>만나자</title>  
+    <asp:ContentPlaceHolder ID="head" runat="server">  
+
+    </asp:ContentPlaceHolder>  
+        <style type="text/css">
+#header{  
+    color: white;  
+    background-color : #0D6ABA;
+    padding-left:60px; 
+    font-size: 20px;  
+    height : 150px;
+    padding-bottom:70px;
+}
+#idpasswd {
+
+    text-align: right;
+    padding: 1px;  
+  }
+#nav{  
+    background-color:#FDAAA2;
+    padding-top:10px;
+    padding-bottom:10px;
+}  
+ul{  
+  
+    list-style-type: none;  
+}  
+li a {  
+    color: black;  
+    font-size: 30px;  
+    column-width: 5%;  
+    }  
+    li  
+   {  
+    display: inline;  
+    padding-left: 2px;  
+    column-width: 20px;  
+   }  
+   a{  
+    text-decoration: none;  
+    margin-left:20px  
+    }  
+   li a:hover{  
+    background-color: #F3FFBD;  
+    color: #FF1654;  
+    padding:1%;  
+   }  
+   #article{  
+    background-color: #EEF5DB;  
+    padding: 10px;  
+    padding-bottom: 75%;  
+   }  
+   #footer{  
+    background-color: #0D6ABA;  
+    padding-bottom: 2%;
+    padding-left: 60px;
+    color : white;
+
+}  
+   #con{  
+       border-color:burlywood;  
+       font-size: 20px; 
+       margin-left:0px; margin-right:200px;
+       padding-left: 60px;
+   }  
+           
+    </style>
+</head>  
+<body>  
+    <!DOCTYPE html>  
+    <form id="form1" runat="server">  
+      
+<html>  
+<head>  
+    <title>만나자</title>  
+</head>  
+<body>  
+<header id="header">  
+<br>
+<h1>
+&nbsp;<asp:Image ID="Image1" runat="server" ImageUrl="~/Images/만나자.png" />
+    </h1>
+    <asp:Panel ID="Panel1" runat="server" Width="400px">
+        <asp:ImageButton ID="ImageButton6" runat="server" ImageUrl="~/Images/로그인p.png" PostBackUrl="~/Login.aspx" Width="80px" />
+    </asp:Panel>
+    <asp:Panel ID="Panel2" runat="server" Width="400px">
+        <asp:ImageButton ID="ImageButton7" runat="server" ImageUrl="~/Images/로그아웃p.png" OnClick="ImageButton7_Click1" Width="80px" />
+    </asp:Panel>
+</header>  
+<nav id="nav">  
+      
+    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/홈.png" OnClick="ImageButton1_Click" PostBackUrl="~/Home.aspx" Width="200px" CausesValidation="False" />
+    <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Images/맛집.png" OnClick="ImageButton2_Click" PostBackUrl="~/StoreList.aspx" Width="200px" CausesValidation="False" />
+    &nbsp;&nbsp;
+    <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/Images/캘린더.png" OnClick="ImageButton3_Click" PostBackUrl="~/CalenderEx.aspx" Width="200px" CausesValidation="False" />
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/Images/게시판.png" OnClick="ImageButton4_Click" PostBackUrl="~/Board/List.aspx" Width="200px" CausesValidation="False" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:ImageButton ID="ImageButton5" runat="server" EnableTheming="True" ImageUrl="~/Images/마이페이지.png" OnClick="ImageButton7_Click" PostBackUrl="~/MemberOnly/Mypage.aspx" Width="200px" CausesValidation="False" />
+      
+</nav>  
+    <div id="con">  
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">  
+        </asp:ContentPlaceHolder>
+    </div>  
+  
+  
+<footer id="footer">  
+    <strong><br class="auto-style1" />
+    </strong><span class="auto-style1">
+    <br />
+    <strong>202031045 김시연<br />
+    202031051 김현정<br />
+    202031052 김민지<br />
+    202031058 김지우</strong></span><br />
+    <br />
+    </footer>  
+</body>  
+</html>  
+      
+    </form>  
+</body>  
+</html>
